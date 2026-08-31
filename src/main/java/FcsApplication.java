@@ -35,9 +35,11 @@ public class FcsApplication extends Application {
         GridPane channels = new GridPane(); channels.setHgap(18); channels.add(sender, 0, 0); channels.add(receiver, 1, 0);
         ColumnConstraints left = new ColumnConstraints(); left.setPercentWidth(50); ColumnConstraints right = new ColumnConstraints(); right.setPercentWidth(50); channels.getColumnConstraints().addAll(left, right);
         VBox report = new VBox(8, text("RESULTADO DA VALIDA\u00C7\u00C3O", "section-label"), status, log); report.getStyleClass().add("report"); report.setMinHeight(96);
-        VBox.setMargin(report, new Insets(0, 0, 24, 0));
         Label hint = text("* Como usar: gere o FCS no transmissor, altere o payload recebido e valide o quadro. O FCS anexado permanece igual para simular a corrup\u00E7\u00E3o.", "hint"); hint.setWrapText(true);
-        VBox root = new VBox(18, title, subtitle, channels, report, hint); VBox.setMargin(channels, new Insets(26, 0, 0, 0)); root.setPadding(new Insets(54, 48, 42, 48)); root.setMaxWidth(1150);
+        VBox laboratory = new VBox(18, channels, report); laboratory.setAlignment(Pos.CENTER);
+        StackPane laboratoryArea = new StackPane(laboratory); laboratoryArea.setMinHeight(520); VBox.setVgrow(laboratoryArea, Priority.ALWAYS);
+        VBox header = new VBox(12, title, subtitle);
+        VBox root = new VBox(0, header, laboratoryArea, hint); root.setPadding(new Insets(42, 48, 38, 48)); root.setMaxWidth(1150);
         StackPane page = new StackPane(root); page.setAlignment(Pos.CENTER);
         Scene scene = new Scene(page, 1220, 850); scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
         stage.setTitle("Ethernet FCS Lab"); stage.setScene(scene); stage.setResizable(false); stage.show(); generateFrame();
