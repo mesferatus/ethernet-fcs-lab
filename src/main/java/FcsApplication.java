@@ -40,7 +40,7 @@ public class FcsApplication extends Application {
         VBox root = new VBox(18, title, subtitle, channels, report, hint); VBox.setMargin(channels, new Insets(26, 0, 0, 0)); root.setPadding(new Insets(54, 48, 42, 48)); root.setMaxWidth(1150);
         StackPane page = new StackPane(root); page.setAlignment(Pos.CENTER);
         Scene scene = new Scene(page, 1220, 850); scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
-        stage.setTitle("Ethernet Frame Inspector"); stage.setScene(scene); stage.setResizable(false); stage.show(); generateFrame();
+        stage.setTitle("Ethernet FCS Lab"); stage.setScene(scene); stage.setResizable(false); stage.show(); generateFrame();
     }
 
     private void generateFrame() { byte[] data = ascii(sentPayload.getText()); transmittedFcs = Crc32Ethernet.calculate(data); sentBytes.setText(bytes(data)); sentFcs.setText(Crc32Ethernet.hex(transmittedFcs)); receivedPayload.setText(sentPayload.getText()); validateFrame(); log.setText("TRANSMISSOR  >  payload convertido  >  FCS anexado  >  quadro pronto"); }
