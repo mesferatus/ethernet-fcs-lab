@@ -1,0 +1,18 @@
+.root { -fx-background-color: #292a32; -fx-font-family: 'Segoe UI'; }
+.eyebrow, .section-label, .key { -fx-font-size: 12px; -fx-font-weight: bold; }
+.eyebrow { -fx-text-fill: #a8c686; }
+.title { -fx-font-family: 'Segoe UI'; -fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: #e4e4df; }
+.subtitle, .hint { -fx-font-size: 15px; -fx-text-fill: #c0c1c6; }
+.section-label { -fx-text-fill: #a8c686; }
+.panel { -fx-border-color: #686972; -fx-border-width: 1; -fx-padding: 22px; }
+.text-field { -fx-background-color: #353740; -fx-border-color: #686972; -fx-border-width: 1; -fx-text-fill: #e4e4df; -fx-prompt-text-fill: #777983; -fx-font-family: 'Consolas'; -fx-font-size: 14px; -fx-padding: 12px; }
+.primary-button, .secondary-button { -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-radius: 0; -fx-padding: 12px 16px; }
+.primary-button { -fx-background-color: #a8c686; -fx-text-fill: #292a32; }
+.secondary-button { -fx-background-color: transparent; -fx-border-color: #a8c686; -fx-text-fill: #a8c686; }
+.primary-button:hover, .secondary-button:hover { -fx-opacity: .82; }
+.key { -fx-min-width: 118px; -fx-text-fill: #a8aab3; }
+.output { -fx-font-family: 'Consolas'; -fx-font-size: 14px; -fx-text-fill: #e4e4df; }
+.data-row { -fx-border-color: #444650; -fx-border-width: 0 0 1 0; -fx-padding: 7px 0; }
+.report { -fx-border-color: #686972; -fx-border-width: 1; -fx-padding: 18px 22px; }
+.status { -fx-font-family: 'Consolas'; -fx-font-size: 20px; -fx-font-weight: bold; }
+.log { -fx-font-family: 'Consolas'; -fx-font-size: 12px; -fx-text-fill: #b2b3ba; }
