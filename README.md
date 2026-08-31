@@ -1,5 +1,5 @@
 <h1 align="center">
-  # ☾ Ethernet FCS Lab ☽
+  ☾ Ethernet FCS Lab ☽
   </h1>
 <br> 
 
